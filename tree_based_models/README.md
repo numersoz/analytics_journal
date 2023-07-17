@@ -4,7 +4,7 @@ Collection of notebooks here explores different tree based machine learning algo
 
 ## Regression Problem
 
-1) [Downlaod Data](regression/01_download_data.ipynb)
+1) [Download Data](regression/01_download_data.ipynb)
 
 2) [Explanatory Data Analysis](regression/02_eda.ipynb)
 
