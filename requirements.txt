@@ -7,3 +7,5 @@ ydata-profiling
 interpret
 xgboost
 pyarrow
+torch
+DeepXDE

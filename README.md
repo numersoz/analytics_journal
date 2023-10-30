@@ -24,3 +24,16 @@ Collection of regression/classification problems using tree based models such as
 * ADA Boost
 * Gradient Boost
 * Extreme Gradient Boost (XGBoost)
+
+## [Physics Informed Neural Networks](physics_informed_neural_networks)
+
+Solutions to Partial Differential Equations in Physics such as Heat Transfer and Fluid Dynamics using both numerical methods and Physics Informed Neural Networks. 
+
+These are modified versions of examples from the Udemy Class (https://www.udemy.com/course/physics-informed-neural-network-pinns/) by Dr. Mohammad Samara.
+
+* 1D Heat Equation Numerical Methods
+* 2D Burgers Equation Numerical Methods
+* 1D Burgers Equation PINN & PyTorch
+* 1D Heat Equation PINN & DeepXDE Library
+
+Note: Code has been beautified & documented with help of ChatGPT.
