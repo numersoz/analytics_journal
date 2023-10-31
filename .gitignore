@@ -1,2 +1,3 @@
 .venv/
-regression/data/
+*.csv
+*.parquet

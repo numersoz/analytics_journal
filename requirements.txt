@@ -11,3 +11,8 @@ graphviz
 pyarrow
 torch
 DeepXDE
+patsy
+statsmodels
+scikit-learn
+pandas
+seaborn
