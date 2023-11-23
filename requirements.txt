@@ -16,3 +16,4 @@ statsmodels
 scikit-learn
 pandas
 seaborn
+requests
