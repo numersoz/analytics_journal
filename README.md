@@ -16,8 +16,6 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Note: Package versions were not specified in requirements.txt to allow pip to resolve conflicts. This may break some of the code's reproducibility in the future. When GPU based execution is preferred for PyTorch based code implementations, PyTorch installation in requirements.txt should be removed and version of PyTorch with Cuda should be installed manually.
-
 ## [Paper to Code](paper_to_code)
 
 Implementation of academic papers with relevant examples of applications.
