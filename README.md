@@ -6,9 +6,9 @@ These serves as my notes towards general analytics applications, to be used as q
 
 ## Virtual Environment
 
-Dependencies are listed here: [requirements.txt](requirements.txt)
+Dependencies are listed under requirements.txt of each directory.
 
-On Windows, they can be installed with below commands:
+On Windows, they can be installed with below commands using a virtual environment:
 
 ```
 python -m venv .venv
