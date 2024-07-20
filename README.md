@@ -6,17 +6,15 @@ These serves as my notes towards general analytics applications, to be used as q
 
 ## Virtual Environment
 
-Dependencies are listed here: [requirements.txt](requirements.txt)
+Dependencies are listed under requirements.txt of each directory.
 
-On Windows, they can be installed with below commands:
+On Windows, they can be installed with below commands using a virtual environment:
 
 ```
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-
-Note: Package versions were not specified in requirements.txt to allow pip to resolve conflicts. This may break some of the code's reproducibility in the future. When GPU based execution is preferred for PyTorch based code implementations, PyTorch installation in requirements.txt should be removed and version of PyTorch with Cuda should be installed manually.
 
 ## [Paper to Code](paper_to_code)
 

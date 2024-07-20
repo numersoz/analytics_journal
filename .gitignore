@@ -1,3 +1,5 @@
 .venv/
-*.csv
-*.parquet
+.vscode/
+**/*.csv
+**/*.parquet
+**/data/
