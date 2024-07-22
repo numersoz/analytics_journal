@@ -16,48 +16,6 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## Install Optimization Solvers
-
-Optimization section requires installation of solvers. List of popular free solvers are below:
-
-### GLPK (GNU Linear Programming Kit)
-
-* Download GLPK from SourceForge: https://sourceforge.net/projects/winglpk/
-* Unzip glpk-4.65 folder and place it in ```C:\glpk-4.65```
-* Add ```C:\glpk-4.65\w64``` to PATH if using x64
-* Test that its working on CMD and get the executable path: ```where glpsol```
-* Usage with Pyomo: ```solver = SolverFactory("glpk", executable= r"C:\glpk-4.65\w64\glpsol.exe")```
-
-### IPOPT (Interior Point OPTimizer)
-
-* Download IPOPT from SourceForge: https://www.coin-or.org/download/binary/Ipopt/Ipopt-3.11.1-win64-intel13.1.zip
-* Unzip Ipopt-3.11.1-win64-intel13.1 folder and place it in ```C:\Ipopt-3.11.1-win64-intel13.1```
-* Add ```C:\Ipopt-3.11.1-win64-intel13.1\bin``` to PATH
-* Test that its working on CMD and get the executable path: ```where ipopt```
-* Usage with Pyomo: ```solver = SolverFactory("ipopt", executable= r"C:\Ipopt-3.11.1-win64-intel13.1\bin\ipopt.exe")```
-
-### CPLEX (C Programming Language for EXecution.)
-
-* Download and install IBM CPLEX Optimization Studio: https://www.ibm.com/account/reg/signup?formid=urx-20028
-* Add ```C:\Program Files\IBM\ILOG\CPLEX_Studio_Community2211\cplex\bin\x64_win64``` to PATH
-* Test that its working on CMD and get the executable path: ```where cplex```
-* Usage with Pyomo: ```solver = SolverFactory("cplex", executable= r"C:\Program Files\IBM\ILOG\CPLEX_Studio_Community2211\cplex\bin\x64_win64\cplex.exe")```
-
-### CBC (COIN-OR Branch and Cut)
-
-* Download CBC Solver: https://github.com/coin-or/Cbc/releases/download/releases%2F2.10.11/Cbc-releases.2.10.11-w64-msvc17-md.zip
-* Unzip glpk-4.65 folder and place it in ```:\Cbc-releases.2.10.11-w64-msvc17-md```
-* Add ```C:\Cbc-releases.2.10.11-w64-msvc17-md\bin``` to PATH
-* Test that its working on CMD and get the executable path: ```where cbc```
-* Usage with Pyomo: ```solver = SolverFactory("cbc", executable= r"C:\Cbc-releases.2.10.11-w64-msvc17-md\bin\cbc.exe")```
-
-### SCIP
-
-* Download and install SCIP Optimization Suite: https://scipopt.org/download.php?fname=SCIPOptSuite-9.1.0-win64-VS15.exe
-* Add ```C:\Program Files\SCIPOptSuite 9.1.0\bin\``` to PATH
-* Test that its working on CMD and get the executable path: ```where scip```
-* Usage with Pyomo: ```solver = SolverFactory("scip", executable= r"C:\Program Files\SCIPOptSuite 9.1.0\bin\scip.exe")``
-
 ## Topics
 
 ### [Paper to Code](paper_to_code)
@@ -120,4 +78,44 @@ Containts examples of different type of optimization problems and its problem so
 * Non Linear Program
 * Mixed Integer Non Linear Program
 
+## Install Optimization Solvers
 
+Optimization section requires installation of solvers. List of popular free solvers are below:
+
+### GLPK (GNU Linear Programming Kit)
+
+* Download GLPK from SourceForge: https://sourceforge.net/projects/winglpk/
+* Unzip glpk-4.65 folder and place it in ```C:\glpk-4.65```
+* Add ```C:\glpk-4.65\w64``` to PATH if using x64
+* Test that its working on CMD and get the executable path: ```where glpsol```
+* Usage with Pyomo: ```solver = SolverFactory("glpk", executable= r"C:\glpk-4.65\w64\glpsol.exe")```
+
+### IPOPT (Interior Point OPTimizer)
+
+* Download IPOPT from SourceForge: https://www.coin-or.org/download/binary/Ipopt/Ipopt-3.11.1-win64-intel13.1.zip
+* Unzip Ipopt-3.11.1-win64-intel13.1 folder and place it in ```C:\Ipopt-3.11.1-win64-intel13.1```
+* Add ```C:\Ipopt-3.11.1-win64-intel13.1\bin``` to PATH
+* Test that its working on CMD and get the executable path: ```where ipopt```
+* Usage with Pyomo: ```solver = SolverFactory("ipopt", executable= r"C:\Ipopt-3.11.1-win64-intel13.1\bin\ipopt.exe")```
+
+### CPLEX (C Programming Language for EXecution.)
+
+* Download and install IBM CPLEX Optimization Studio: https://www.ibm.com/account/reg/signup?formid=urx-20028
+* Add ```C:\Program Files\IBM\ILOG\CPLEX_Studio_Community2211\cplex\bin\x64_win64``` to PATH
+* Test that its working on CMD and get the executable path: ```where cplex```
+* Usage with Pyomo: ```solver = SolverFactory("cplex", executable= r"C:\Program Files\IBM\ILOG\CPLEX_Studio_Community2211\cplex\bin\x64_win64\cplex.exe")```
+
+### CBC (COIN-OR Branch and Cut)
+
+* Download CBC Solver: https://github.com/coin-or/Cbc/releases/download/releases%2F2.10.11/Cbc-releases.2.10.11-w64-msvc17-md.zip
+* Unzip glpk-4.65 folder and place it in ```:\Cbc-releases.2.10.11-w64-msvc17-md```
+* Add ```C:\Cbc-releases.2.10.11-w64-msvc17-md\bin``` to PATH
+* Test that its working on CMD and get the executable path: ```where cbc```
+* Usage with Pyomo: ```solver = SolverFactory("cbc", executable= r"C:\Cbc-releases.2.10.11-w64-msvc17-md\bin\cbc.exe")```
+
+### SCIP
+
+* Download and install SCIP Optimization Suite: https://scipopt.org/download.php?fname=SCIPOptSuite-9.1.0-win64-VS15.exe
+* Add ```C:\Program Files\SCIPOptSuite 9.1.0\bin\``` to PATH
+* Test that its working on CMD and get the executable path: ```where scip```
+* Usage with Pyomo: ```solver = SolverFactory("scip", executable= r"C:\Program Files\SCIPOptSuite 9.1.0\bin\scip.exe")```
