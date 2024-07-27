@@ -1,0 +1,28 @@
+# Dockerfile.jupyter
+
+FROM jupyter/pyspark-notebook:x86_64-spark-3.5.0
+
+USER root
+
+# Retry apt-get update and install packages to handle transient issues
+RUN apt-get update && \
+    apt-get install -y vim less || apt-get install -y vim less || apt-get install -y vim less && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy requirements.txt and install packages
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+# Install JupyterLab
+RUN pip install --no-cache-dir jupyterlab hdfs
+
+USER jovyan
+
+# Set Spark Master URL
+ENV SPARK_MASTER=spark://spark-master:7077
+
+# Create a startup script to configure Spark
+RUN echo "export SPARK_MASTER=spark://spark-master:7077" >> ~/.bashrc
+
+# Start JupyterLab
+CMD ["start.sh", "jupyter", "lab"]
