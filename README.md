@@ -20,11 +20,11 @@ pip install -r requirements.txt
 
 Below are useful multi-purpuse Docker files images.
 
-### [PySpark, HDFS and Jupyter Lab Server](docker_images/pyspark_jupyter_server/docker-compose.yaml)
+### [PySpark, HDFS and Jupyter Lab Server](docker_images/pyspark_hdfs_jupyter_server/docker-compose.yaml)
 
 Below number of workers can be adjusted:
 ```
-cd docker_images\pyspark_jupyter_server
+cd docker_images\pyspark_hdfs_jupyter_server
 docker-compose up --scale spark-worker=2
 ```
 
