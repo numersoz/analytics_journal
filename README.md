@@ -16,6 +16,40 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+## Docker Containers
+
+Below are useful multi-purpuse Docker files images.
+
+### [PySpark, HDFS and Jupyter Lab Server](docker_images/pyspark_jupyter_server/docker-compose.yaml)
+
+Below number of workers can be adjusted:
+```
+cd docker_images\pyspark_jupyter_server
+docker-compose up --scale spark-worker=2
+```
+
+To List Containers Including Stopped Ones:
+```
+docker ps -a
+```
+
+To Start Container:
+```
+docker start {container_name}
+```
+
+Load Jupyter Lab:
+```
+http://localhost:8888/lab
+```
+
+Load Spark View:
+```
+http://localhost:8080/
+```
+
+[Demo Notebook](docker_images/pyspark_jupyter_server/demo.ipynb)
+
 ## Topics
 
 ### [Paper to Code](paper_to_code)
