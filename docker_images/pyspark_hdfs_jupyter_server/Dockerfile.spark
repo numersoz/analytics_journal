@@ -1,3 +1,18 @@
 FROM bitnami/spark:3.5.0
 
-# (Optional) Add any additional packages or configuration here if needed
+USER root
+
+# Install prerequisites
+RUN apt-get update && apt-get install -y curl
+
+# Specify the Scala version
+ENV SCALA_VERSION=2.12
+
+# Copy spark-defaults.conf to the correct location
+COPY spark-defaults.conf /opt/bitnami/spark/conf/spark-defaults.conf
+
+# Download and install Delta Lake, Azure Data Lake Storage, and AWS JARs
+RUN curl -O https://repo1.maven.org/maven2/io/delta/delta-core_2.12/2.4.0/delta-core_2.12-2.4.0.jar \
+    && curl -O https://repo1.maven.org/maven2/io/delta/delta-storage/3.2.0/delta-storage-3.2.0.jar \
+    && mv delta-core_2.12-2.4.0.jar /opt/bitnami/spark/jars \
+    && mv delta-storage-3.2.0.jar /opt/bitnami/spark/jars

@@ -4,25 +4,25 @@ FROM jupyter/pyspark-notebook:x86_64-spark-3.5.0
 
 USER root
 
-# Retry apt-get update and install packages to handle transient issues
-RUN apt-get update && \
-    apt-get install -y vim less || apt-get install -y vim less || apt-get install -y vim less && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y curl
 
+# Specify the Scala version
+ENV SCALA_VERSION=2.12
+
+# Download and install necessary JAR files
+RUN curl -O https://repo1.maven.org/maven2/io/delta/delta-core_2.12/2.4.0/delta-core_2.12-2.4.0.jar && \
+    curl -O https://repo1.maven.org/maven2/io/delta/delta-storage/3.2.0/delta-storage-3.2.0.jar && \
+    mv delta-core_2.12-2.4.0.jar /usr/local/spark/jars && \
+    mv delta-storage-3.2.0.jar /usr/local/spark/jars
+    
 # Copy requirements.txt and install packages
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
-
-# Install JupyterLab
-RUN pip install --no-cache-dir jupyterlab hdfs
 
 USER jovyan
 
 # Set Spark Master URL
 ENV SPARK_MASTER=spark://spark-master:7077
 
-# Create a startup script to configure Spark
-RUN echo "export SPARK_MASTER=spark://spark-master:7077" >> ~/.bashrc
-
-# Start JupyterLab
-CMD ["start.sh", "jupyter", "lab"]
+# Start JupyterLab in /mnt/cluster
+CMD ["jupyter", "lab", "--notebook-dir=/mnt/cluster"]
