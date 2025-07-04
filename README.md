@@ -2,7 +2,7 @@
 
 Collection of different topics in data science & computational methods and their implementation examples.
 
-These serves as my notes towards general analytics applications, to be used as quick reference guide. ChatGPT has been used to enhance the code to ensure high quality content in some cases.
+These serves as my notes towards general analytics applications, to be used as quick reference guide. LLMs have used to enhance the code to ensure high quality content in some cases.
 
 ## Virtual Environment
 
@@ -101,6 +101,15 @@ Examples are conversion of Matlab/R based lecture notes from Georgia Tech's ISYE
 Evaluation of different change point detection algorithms.
 
 * CUSUM (Cumulative Sum Control Chart)
+* Isolation Forest
+* Auto Encoder
+
+### [Dynamic Optimization](dynamic_optimization)
+
+Implementation of dynamic optimization algorithms and policy evaluation methods.
+
+* Stock Selling Policy Evaluation using Recursive Least Squares
+* Utility classes for Recursive Least Squares implementation
 
 ### [Optimization](optimization)
 
@@ -132,7 +141,7 @@ Optimization section requires installation of solvers. List of popular free solv
 * Test that its working on CMD and get the executable path: ```where ipopt```
 * Usage with Pyomo: ```solver = SolverFactory("ipopt", executable= r"C:\Ipopt-3.11.1-win64-intel13.1\bin\ipopt.exe")```
 
-### CPLEX (C Programming Language for EXecution.)
+### CPLEX (C Programming Language for Execution.)
 
 * Download and install IBM CPLEX Optimization Studio: https://www.ibm.com/account/reg/signup?formid=urx-20028
 * Add ```C:\Program Files\IBM\ILOG\CPLEX_Studio_Community2211\cplex\bin\x64_win64``` to PATH
