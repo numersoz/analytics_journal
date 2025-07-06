@@ -113,7 +113,7 @@ Implementation of dynamic optimization algorithms and policy evaluation methods.
 
 ### [Optimization](optimization)
 
-Containts examples of different type of optimization problems and its problem solutions via different Python packages.
+Contains examples of different type of optimization problems and its problem solutions via different Python packages.
 
 * Linear Program
 * Mixed Integer Program
