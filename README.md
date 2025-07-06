@@ -108,8 +108,8 @@ Evaluation of different change point detection algorithms.
 
 Implementation of dynamic optimization algorithms and policy evaluation methods.
 
-* Stock Selling Policy Evaluation using Recursive Least Squares
-* Utility classes for Recursive Least Squares implementation
+* Stock Selling Policy Evaluation using Recursive Least Squares and Policy Evaluation
+* Adaptive Market Planning Using Bayesian Estimation and Policy Evaluation
 
 ### [Optimization](optimization)
 
